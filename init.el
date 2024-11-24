@@ -194,6 +194,8 @@
      ("CANCELED" . (:foreground "DodgerBlue1"))
      ("BLOCKED" . (:foreground "DarkOrange1"))))
   (org-return-follows-link t)
+  (org-id-link-to-org-use-id 'create-if-interactive-and-no-custom-id)
+  (org-startup-folded 'fold)
   (org-pretty-entities t)
   (org-agenda-window-setup 'only-window)
   (org-agenda-restore-windows-after-quit t))
