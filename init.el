@@ -569,6 +569,7 @@
   "Called by emacs-startup-hook to set up my initial window configuration."
   (org-agenda-list))
 
+(add-hook 'dired-mode-hook 'dired-omit-mode)
 (add-hook 'emacs-startup-hook #'my-default-window-setup)
 
 (provide 'init)
