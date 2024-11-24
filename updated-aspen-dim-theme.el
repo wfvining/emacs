@@ -18,6 +18,8 @@
  '(shadow ((t (:foreground "snow4"))))
  '(flycheck-error ((t (:underline (:color "tomato" :style wave)))))
  '(flycheck-warning ((t (:underline (:color "DarkGoldenrod1" :style wave)))))
+ '(flyspell-incorrect ((t (:underline (:color "tomato" :style line)))))
+ '(flyspell-duplicate ((t (:underline (:color "DarkGoldenrod1" :style line)))))
  '(flycheck-fringe-error ((t (:foreground "tomato"))))
  '(org-level-1 ((t (:inherit outline-1 :extend nil))))
  '(org-tag ((t (:foreground "azure4" :slant oblique :weight normal))))
