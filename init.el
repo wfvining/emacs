@@ -183,7 +183,8 @@
 
 (use-package org
   :hook ((org-mode . auto-fill-mode) (org-mode . turn-on-flyspell))
-  :bind (("C-c a" . #'org-agenda))
+  :bind (("C-c a" . #'org-agenda)
+         ("C-c c" . #'org-capture))
   :custom
   (org-log-into-drawer t)
   (org-todo-keywords
@@ -198,8 +199,13 @@
   (org-startup-folded 'fold)
   (org-pretty-entities t)
   (org-agenda-window-setup 'only-window)
-  (org-agenda-restore-windows-after-quit t))
+  (org-agenda-restore-windows-after-quit t)
+  (org-default-notes-file "~/org/notes.org")
+  (org-refile-targets '((org-agenda-files . (:maxlevel . 3)))
+  (org-refile-use-outline-path t)
+  (org-refile-complete-in-steps t)))
 (load "~/.emacs.d/agenda.el" 'noerror)
+(load "~/.emacs.d/capture.el" 'noerror)
 ;; This is a hack to deal with org-ctags modifying the link following
 ;; behavior when it is loaded. I'm not sure what is loading it, but
 ;; something is and this will make sure that whenever it happens we
