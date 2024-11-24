@@ -89,13 +89,10 @@
 
 (use-package fancy-compilation :config (fancy-compilation-mode))
 
-(let ((installed (package-installed-p 'all-the-icons)))
-  (use-package all-the-icons)
-  (unless installed (all-the-icons-install-fonts)))
-
-(use-package all-the-icons-dired
-  :after all-the-icons
-  :hook (dired-mode . all-the-icons-dired-mode))
+(use-package nerd-icons)
+(use-package nerd-icons-dired
+  :after nerd-icons
+  :hook (dired-mode . nerd-icons-dired-mode))
 
 ;; de-pollute the mode line
 (use-package diminish
