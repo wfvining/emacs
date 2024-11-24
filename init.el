@@ -198,6 +198,11 @@
   (org-agenda-window-setup 'only-window)
   (org-agenda-restore-windows-after-quit t))
 (load "~/.emacs.d/agenda.el" 'noerror)
+;; This is a hack to deal with org-ctags modifying the link following
+;; behavior when it is loaded. I'm not sure what is loading it, but
+;; something is and this will make sure that whenever it happens we
+;; put the link behavior back to the default.
+(with-eval-after-load 'org-ctags (setq org-open-link-functions nil))
 
 (use-package magit
   :diminish magit-auto-revert-mode
